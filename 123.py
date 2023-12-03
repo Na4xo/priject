@@ -34,8 +34,8 @@ def logout():
     for key, value in users.items():
         if value == token:
             del users[key]
-            return 'крутаааа вышел'
-    return 'ощепка'
+            return 'Пользователь вышел из чата'
+    return 'Ошибка'
 
 
 @app.route("/send")
@@ -53,7 +53,7 @@ def send():
        if value == token:
             return text
      
-    return 'err'
+    return 'Ошибка'
    
 
 @app.route("/getall")
@@ -65,5 +65,5 @@ def getall():
 
 
 if __name__ == "__main__":
-    print('RABOTAEM')
+    print('Работает')
     {app.run(debug=True)}
